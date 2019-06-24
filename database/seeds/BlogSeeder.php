@@ -12,10 +12,16 @@ class BlogSeeder extends Seeder
      */
     public function run()
     {
-        BlogPost::truncate();
+        App\BlogPost::truncate();
 
         $faker = \Faker\Factory::create();
 
+        for ($i = 0; $i < 20; $i++) {
+            App\BlogPost::create([
+                'blogTitle' => $faker->sentence,
+                'blogContent' => $faker->paragraph,
+            ]);
+        }
         
 
     }
