@@ -1,10 +1,12 @@
 <?php
 
-use App\BlogPost;
+
 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\BlogPost;
+
 
 class BlogPostController extends Controller
 {
